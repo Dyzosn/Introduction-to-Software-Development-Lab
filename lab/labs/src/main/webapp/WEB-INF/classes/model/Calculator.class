@@ -1,0 +1,36 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package model;
+
+public class Calculator {
+   public Calculator() {
+   }
+
+   public int add(int a, int b) {
+      return a + b;
+   }
+
+   public int subtract(int a, int b) {
+      return a - b;
+   }
+
+   public int mul(int a, int b) {
+      return a * b;
+   }
+
+   public double power(int a, int b) {
+      return Math.pow((double)a, (double)b);
+   }
+
+   public int evaluate(String expression) {
+      int sum = 0;
+      String[] var6;
+      int var5 = (var6 = expression.split("\\+")).length;
+
+      for(int var4 = 0; var4 < var5; ++var4) {
+         String summand = var6[var4];
+         sum += Integer.valueOf(summand);
+      }
+
+      return sum;
+   }
+}
