@@ -1,0 +1,42 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package model;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class CalculatorTest {
+   private Calculator calculator = new Calculator();
+
+   public CalculatorTest() {
+   }
+
+   @Test
+   public void evaluatesExpression() {
+      int sum = this.calculator.evaluate("1+2+3");
+      Assert.assertEquals(6L, (long)sum);
+   }
+
+   @Test
+   public void testAdd() {
+      int res = this.calculator.add(2, 5);
+      Assert.assertEquals(7L, (long)res);
+   }
+
+   @Test
+   public void testSub() {
+      int res = this.calculator.subtract(5, 3);
+      Assert.assertEquals(2L, (long)res);
+   }
+
+   @Test
+   public void testMul() {
+      int res = this.calculator.mul(2, 4);
+      Assert.assertEquals(8L, (long)res);
+   }
+
+   @Test
+   public void testPow() {
+      double res = this.calculator.power(2, 3);
+      junit.framework.Assert.assertEquals(8.0, res, 0.001);
+   }
+}
